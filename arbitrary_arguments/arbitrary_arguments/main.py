@@ -1,13 +1,13 @@
-def calculate_total(___):
-    if ___:
+def calculate_total(*prices):
+    if not prices:
         return "Your cart is empty."
 
-    total = ___
+    total = sum(prices)
 
-    if ___
-        total *= ___  # 20% discount
-    elif ___:
-        total *= ___  # 10% discount
+    if total >= 200:
+        total *= 0.8  # 20% discount
+    elif total >= 100:
+        total *= 0.9  # 10% discount
 
     return f"Final total: ${total:.2f}"
 
